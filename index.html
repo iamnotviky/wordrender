@@ -8,7 +8,7 @@
 <body>
     <div class="main" ng-app="myList" ng-controller="myListController">
         <h1>Item List</h1>
-        <div nav="container" class="addItem">
+        <div class="addItem">
             <input ng-model="newItem"  placeholder="Add Item" class="addText">
             <button ng-click="pushItem()">Add Item</button>
 
@@ -22,6 +22,16 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="script.js"></script>
+
+    <form autocomplete="off" action="/action_page.php">
+        <div class="autocomplete" style="width:300px;">
+            <input id="myInput" type="text" name="myCountry" placeholder="Country">
+        </div>
+        <input type="submit">
+    </form>
+    <script>
+        autocomplete(document.getElementById("myInput"), countries);
+    </script>
 
 </body>
 
